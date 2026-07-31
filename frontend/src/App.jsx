@@ -191,7 +191,10 @@ export default function App() {
         )}
 
         {activeTab === 'donate' && (
-          <DonationForm onListingCreated={handleListingCreated} API_URL={API_URL} />
+          <DonationForm 
+  onListingCreated={handleListingCreated} 
+  API_URL={import.meta.env.VITE_API_URL || 'http://localhost:8000'} 
+/>
         )}
 
         {activeTab === 'feed' && (
