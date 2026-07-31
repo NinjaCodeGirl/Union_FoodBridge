@@ -10,12 +10,12 @@ router = APIRouter(prefix="/api/donations", tags=["Surplus Food Listings"])
 SURPLUS_DB = [
     {
         "id": "list-001",
-        "donor_name": "NSUT Campus Dining Hall",
+        "donor_name": "Food 24/7 Restaurant",
         "donor_phone": "+91 98765 43210",
         "food_title": "Fresh Cooked Dal Makhani & Rice",
         "food_category": "COOKED_MEALS",
         "classification": "CATEGORY_A",
-        "quantity_servings": 180,
+        "quantity_servings": 200,
         "weight_kg": 54.0,
         "freshness_score": 94.50,
         "risk_level": "LOW",
@@ -23,7 +23,7 @@ SURPLUS_DB = [
         "validation_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "estimated_shelf_life_hours": 5.2,
         "status": "AVAILABLE",
-        "pickup_address": "NSUT Main Campus, Sector 3, Dwarka, New Delhi",
+        "pickup_address": "Dwarka Sec 14",
         "latitude": 28.6100,
         "longitude": 77.0380,
         "created_at": datetime.now(timezone.utc)
