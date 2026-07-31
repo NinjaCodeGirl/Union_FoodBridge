@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PlusCircle, Sparkles, AlertTriangle, CheckCircle2, Thermometer, Clock, MapPin, Phone, Zap } from 'lucide-react';
 import VoiceAssistant from './VoiceAssistant';
 
-export default function DonationForm({ onListingCreated, API_URL = 'http://localhost:8000' }) {
+export default function DonationForm({ onListingCreated, API_URL = '' }) {
   const [formData, setFormData] = useState({
     donor_name: 'Taj Palace Banquet Kitchen',
     donor_phone: '+91 98999 11223',
@@ -103,7 +103,7 @@ export default function DonationForm({ onListingCreated, API_URL = 'http://local
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch(`${API_URL}/api/donations/create`, {
+      const res = await fetch('/api/donations/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
